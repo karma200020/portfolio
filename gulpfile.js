@@ -5,6 +5,7 @@ const sass = require('gulp-sass');
 const wait = require('gulp-wait');
 const babel = require('gulp-babel');;
 const rename = require('gulp-rename');
+var deploy = require('gulp-gh-pages');
 
 gulp.task('scripts', function() {
     return gulp.src('./js/scripts.js')
@@ -37,3 +38,8 @@ gulp.task('watch', function() {
     gulp.watch('./js/scripts.js', gulp.series('scripts'));
     gulp.watch('./scss/styles.scss', gulp.series('styles'));
 });
+
+gulp.task('deploy', function () {
+    return gulp.src("./dist/**/*")
+      .pipe(deploy())
+  });
