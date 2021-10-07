@@ -51,6 +51,7 @@ $border: #dcd9d9;
 // Define text colors
 $heading: #374054;
 $text: #74808a;
+$title: #87d441;
 
 /*
     ---------------------
@@ -87,16 +88,54 @@ $text: #74808a;
     ----- 3. Global Styles -----
     ----------------------------
 */
+html{
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Ubuntu';
     font-size: 16px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behaviour: smooth;
+    position: relative;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: y mandatory;
 
     &.active {
         overflow: hidden;
         z-index: -1;
     }
 }
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: #ebebeb;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #6d6d6d; 
+}
+.f{
+    display: flex;
+}
+  
+  section {
+    position: relative;
+    text-align: center;
+    height: 100%;
+    scroll-snap-align: start;
+  }
+  
 
 // Terminal Styling
 
@@ -116,6 +155,7 @@ body {
     align-items: center;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
+    cursor: pointer;
   }
   
   .Toolbar__buttons {
@@ -287,7 +327,7 @@ header {
 
         img {
             
-            max-width: 40px;
+            max-width: 60px;
         }
     }
 
@@ -476,8 +516,7 @@ footer {
 
 .ubuntu-head{
     z-index: 11;
-    color: white;
-    background: #252525c2;
+    color: #d8d8d8;
     position: absolute;
     top: 0;
     width: 100%;
@@ -486,6 +525,11 @@ footer {
     display: flex;
     padding: 4px 12px;
     font-size: 15px;
+    background: rgb(0,0,0);
+    background: -moz-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(50,50,50,1) 49%, rgba(132,132,132,0.9139005944174545) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(50,50,50,1) 49%, rgba(132,132,132,0.9139005944174545) 100%);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(50,50,50,1) 49%, rgba(132,132,132,0.9139005944174545) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#848484",GradientType=1);
     
     
     .it{
@@ -510,12 +554,13 @@ footer {
 }
 
 #lead-content {
-    position: absolute;
+
     z-index: 10;
     top: 50%;
     left: 45%;
-    transform: translate(-50%, -50%);
     text-align: center;
+    margin-left: 5%;
+    margin-top: 5%;
 
     h1, h2 {
         margin: 0;
@@ -600,16 +645,44 @@ footer {
     ---------------------------
 */
 
+#aboutSec{
+    height: 100vh;
+    background: linear-gradient( 45deg, #57003f 0%, #f57453 100%);
+
+    .ubuntu-head{
+        position: inherit;
+    }
+
+    .aboutR{
+        display: flex;
+        height: 96%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .folderImg{
+        position: inherit;
+    }
+}
+
 #about {
-    padding: 75px 15px;
+    margin-left: 5%;
+    margin-top: 4%;
+    padding-top: 0;
     border-bottom: 1px solid $border;
+    background: rgba(56,4,40,0.9);
+    min-height: 34vw;
+
+    .aboutT{
+        margin-bottom: 10%;
+    }
+    
 
     h2 {
-        color: $heading;
+        color: #87d441;
     }
 
     p {
-        color: $text;
+        color: #cdcdcd;
         margin: 0;
     }
 }
@@ -620,13 +693,41 @@ footer {
     --------------------------------
 */
 
+#expSec{
+
+    height: 100vh;
+    background: linear-gradient( 45deg, #57003f 0%, #f57453 100%);
+    overflow: hidden;
+
+    .ubuntu-head{
+        position: inherit;
+    }
+    .row{
+        display: flex;
+        height: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .folderImg{
+        position: inherit;
+    }
+
+}
+
 #experience {
-    padding: 50px 15px;
+
     text-align: center;
     border-bottom: 1px solid $border;
+    height: 85%;
+    overflow: scroll;
+    margin-top: 2%;
+    margin-left: 5%;
+    background: #3f072b;
+    overflow-x: hidden;
 
     h2 {
-        color: $heading;
+        color: $title;
     }
 }
 
@@ -671,7 +772,7 @@ footer {
     h3 {
         font-size: 1.5em;
         font-weight: 300;
-        color: $heading;
+        color: $title;
         display: inline-block;
         margin: 0;
     }
@@ -722,7 +823,7 @@ footer {
     left: 0;
     top: 10px;
     font-weight: 300;
-    color: #374054;
+    color: $title;
 }
 
 /*
@@ -731,13 +832,42 @@ footer {
     -------------------------------
 */
 
+#eduSec{
+
+    height: 100vh;
+    background: linear-gradient( 45deg, #57003f 0%, #f57453 100%);
+    overflow: hidden;
+
+    .ubuntu-head{
+        position: inherit;
+    }
+    .row{
+        display: flex;
+        height: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .folderImg{
+        position: inherit;
+    }
+
+    
+}
+
 #education {
-    padding: 50px 15px 20px 15px;
-    border-bottom: 1px solid $border;
     text-align: center;
+    border-bottom: 1px solid $border;
+    height: 85%;
+    overflow: scroll;
+    margin-top: 2%;
+    margin-left: 5%;
+    background: #3f072b;
+    overflow-x: hidden;
+
 
     h2 {
-        color: $heading;
+        color: $title;
         margin-bottom: 50px;
     }
 }
@@ -748,12 +878,13 @@ footer {
     padding: 15px;
     border: 1px solid $border;
     text-align: left;
+    background: white;
 
     h3 {
         font-weight: 500;
         float: left;
         margin: 0;
-        color: $heading;
+        color: $title;
     }
 
     span {
@@ -785,62 +916,71 @@ footer {
     -------------------------------
 */
 
-#projects {
-    padding: 50px 15px;
-    border-bottom: 1px solid $border;
-    text-align: center;
-
-    h2 {
-        color: $heading;
-        margin-bottom: 50px;
-    }
-}
-
-.project {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto 30px auto;
+#proSec{
+    height: 100vh;
+    background: linear-gradient( 45deg, #57003f 0%, #f57453 100%);
     overflow: hidden;
-    background: #fff;
-    border-radius: 4px;
-}
 
-.project-image {
-    float: left;
-}
-
-.project-info {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 300px;
-    padding: 15px;
-
-    h3 {
-        font-size: 1.5em;
-        font-weight: 300;
-        color: $heading;
-        margin: 0 0 15px 0;
+    #education{
+        overflow-y: hidden;
+        border: 1px solid #4d4843;
+        border-radius: 7px;
+        .query{
+            color: #d0d0d0;
+            margin-left: 1.5rem;
+        }
+        .Prompt__user{
+            font-size: 1.7rem;
+        }
     }
 
-    p {
-        color: $text;
-        margin: 0 0 15px 0;
-        font-size: 0.9em;
+    .ubuntu-head{
+        position: inherit;
     }
-}
 
-.no-image {
-    .project-info {
-        position: relative;
-        margin: 0;
-        padding: 30px 15px;
-        transform: none;
+
+    .folderImg{
+        position: inherit;
     }
-}
 
-#more-projects {
-    display: none;
+
+    .f{
+        height: 100%;
+        width: 100%;
+        display: flex;
+
+        .col-6{
+            width: 100%;
+        }
+    }
+
+    //  cards styling start
+
+    .swiper {
+        width: 57%;
+        height: 86%;
+      }
+
+      .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 18px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #fff;
+      }
+
+    .swiper-3d .swiper-slide-shadow {
+        background: 0;
+    }
+
+    .swiper-3d .swiper-slide-shadow {
+        background: 0;
+    }
+
+    
+
 }
 
 /*
@@ -848,6 +988,54 @@ footer {
     ----- 9. Skills Styles -----
     -------------------------------
 */
+
+
+#skillSec{
+
+    height: 100vh;
+    background: linear-gradient( 45deg, #57003f 0%, #f57453 100%);
+    overflow: hidden;
+
+    .ubuntu-head{
+        position: inherit;
+    }
+
+    #education{
+        overflow-y: hidden;
+        border: 1px solid #4d4843;
+        border-radius: 7px;
+        .query{
+            color: #d0d0d0;
+            margin-left: 1.5rem;
+        }
+        .Prompt__user{
+            font-size: 1.7rem;
+        }
+    }
+    .row{
+        display: flex;
+        height: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        
+    }
+
+    .r{
+        display: block;
+        .col-3{
+            width: 100%;
+        }
+        .col-md-3 {
+            width: 25%;
+            height: 28%;
+        }
+    }
+
+    .folderImg{
+        position: inherit;
+    }
+
+}  
 
 #skills {
     padding: 50px 15px;
@@ -883,9 +1071,55 @@ footer {
     -------------------------------
 */
 
+#conSec{
+
+    height: 100vh;
+    background: linear-gradient( 45deg, #57003f 0%, #f57453 100%);
+    overflow: hidden;
+
+    .ubuntu-head{
+        position: inherit;
+    }
+
+    #education{
+        overflow-y: hidden;
+        border: 1px solid #4d4843;
+        border-radius: 7px;
+        .query{
+            color: #d0d0d0;
+            margin-left: 1.5rem;
+        }
+        .Prompt__user{
+            font-size: 1.7rem;
+        }
+    }
+    .row{
+        display: flex;
+        height: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        
+    }
+
+    .r{
+        display: block;
+        .col-3{
+            width: 100%;
+        }
+        .col-md-3 {
+            width: 25%;
+            height: 28%;
+        }
+    }
+
+    .folderImg{
+        position: inherit;
+    }
+
+}  
+
 #contact {
     padding: 50px 15px;
-    background: $base-color;
     text-align: center;
 
     h2 {
@@ -906,16 +1140,15 @@ footer {
         border-radius: 4px;
         border: none;
         margin-bottom: 10px;
-        background: darken($base-color, 15%);
-        color: #fff;
+        color: rgb(49, 49, 49);
         @include transition();
         @include placeholder {
-            color: #fff;
+            color: #3f072b;
         }
 
         &:focus {
             outline: none;
-            background: darken($base-color, 25%);
+            background: rgb(248, 248, 248);
         }
     }
 
@@ -1176,15 +1409,33 @@ footer {
         margin: 0;
         border-bottom-right-radius: 4px;
         border-bottom-left-radius: 4px;
+        height: 100%;
+        background: #26152491;
+        justify-content: flex-end;
+        padding-top: 2.1rem;
+        
         
     }
 
+    .menuIcon{
+
+        cursor: pointer;
+        img{
+            width: 40px;
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+
+        }
+    }
+
     li {
-        display: inline-block;
+        margin-bottom: 4.5rem;
+        display: block;
 
         img {
             
-            max-width: 40px;
+            max-width: 50px;
         }
     }
 
@@ -1218,6 +1469,8 @@ footer {
 
 .both{
     display: flex;
+    margin-top: 1.4rem;
+    height: 100%;
 }
 .int{
     z-index: 2;
