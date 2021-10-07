@@ -1,5 +1,38 @@
 
 
+
+// loader animation
+
+// var load = document.getElementById("loader");
+// function loader(){
+
+//     setTimeout(removeLoader, 2000);
+    
+// }
+
+// function removeLoader(){
+//     load.style.display = 'none';
+// }
+
+function preloader() {
+    document.getElementById("wrap").style.opacity = "0";
+    myVar = setTimeout(showPart, 750);
+}
+
+function showPart() {
+  document.getElementById("loader").style.opacity = "0";
+
+  myVar2 = setTimeout(showFull, 750);
+}
+
+function showFull(){
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("wrap").style.display = "block";
+    document.getElementById("wrap").style.opacity = "1";
+}
+
+
+
 // animate css animations
 
 
