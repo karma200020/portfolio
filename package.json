@@ -1,12 +1,11 @@
 {
-  "name": "devportfolio-template",
+  "name": "portfolio",
   "version": "1.2.2",
-  "description": "",
+  "description": "* Gulp ready (compiles Sass and minifies JS)\r * Sass ready with lots of commenting\r * Fully responsive\r * Comes with Bootstrap grid system\r * Easy colour changes can be done through simple variable edits",
   "main": "js/scripts.js",
   "scripts": {
     "watch": "gulp watch",
     "start": "node index.js"
-    
   },
   "keywords": [
     "portfolio",
@@ -34,5 +33,13 @@
   "dependencies": {
     "swiper": "^7.0.8",
     "typed.js": "^2.0.12"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karma200020/portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/karma200020/portfolio/issues"
+  },
+  "homepage": "https://github.com/karma200020/portfolio#readme"
 }

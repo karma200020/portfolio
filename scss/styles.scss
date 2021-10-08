@@ -773,6 +773,8 @@ footer {
 
     h2 {
         color: $title;
+        font-size: 40px;
+        margin-bottom: 7px;
     }
 }
 
@@ -803,6 +805,9 @@ footer {
         background: linear-gradient(to bottom, $base-color, rgba($base-color, 0));
         top: 100%;
         left: 303px;
+    }
+    h3 {
+        color: $title !important;
     }
 }
 
@@ -883,6 +888,16 @@ footer {
     background: linear-gradient( 45deg, #57003f 0%, #f57453 100%);
     overflow: hidden;
 
+
+    .query{
+        color: #d0d0d0;
+        margin-left: 1.5rem;
+    }
+    .Prompt__user{
+        font-size: 1.7rem;
+        margin-bottom: 3rem;
+    }
+
     .ubuntu-head{
         position: inherit;
     }
@@ -902,18 +917,22 @@ footer {
 
 #education {
     text-align: center;
-    border-bottom: 1px solid $border;
     height: 85%;
     overflow: scroll;
     margin-top: 2%;
+    overflow-y: hidden;
     margin-left: 5%;
     background: #3f072b;
     overflow-x: hidden;
+    border-radius: 1%;
+    border: 2px solid;
+    border-color: #413f3b;
 
 
     h2 {
         color: $title;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
+        font-size: 40px;
     }
 }
 
@@ -929,7 +948,15 @@ footer {
         font-weight: 500;
         float: left;
         margin: 0;
+        color: $title !important;
+    }
+
+    .no-js #experience-timeline>div h3 {
+        font-size: 1.5em;
+        font-weight: 300;
         color: $title;
+        display: inline-block;
+        margin: 0;
     }
 
     span {
@@ -1067,6 +1094,21 @@ footer {
         margin-left: 0;
         margin-right: 0;
         
+    }
+
+    .btn-rounded-white {
+        display: inline-grid;
+        color: #fff;
+        padding: 15px 25px;
+        border: 3px solid #fff;
+        border-radius: 30px;
+        transition: .5s ease all;
+        text-align: center;
+
+        img{
+            vertical-align: middle;
+            margin: auto;
+        }
     }
 
     .r{

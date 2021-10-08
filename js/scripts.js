@@ -32,6 +32,19 @@ function showFull(){
 }
 
 
+// showing time
+
+var clockElement = document.getElementsByClassName('clock');
+console.log(clockElement)
+
+function clock() {
+        for (var i=0; i<clockElement.length; i++) {
+            clockElement[i].textContent = new Date().toString();  
+        }
+}
+
+setInterval(clock, 1000);
+
 
 // animate css animations
 
@@ -53,7 +66,7 @@ function createTyped( classes, text, loop, showCursor, speed=100 ){
 
 }
 
-createTyped('.aboutMe',['Software Developer','Web Developer','App Developer','Machine Learning Engineer','Illustrator','UI / UX Desinger'], true, true);
+createTyped('.aboutMe',['Web Developer','App Developer', 'Competitive Programmer', 'Machine Learning Engineer','Illustrator','UI / UX Desinger', ], true, true);
 createTyped('.name',['Abhishek Mishra',], false, true);
 createTyped('.aboutQues',['string About(Self) =>',], false, true);
 createTyped('.aboutText',['I am a final year Computer Science and Engineering undergrad, primarily a full-stack developer. My eagerness of learning and applying theoretical knowledge drives me. I have done several internships during which I honed my development skills. I am proficient with MEAN / MERN stacks. I have worked with several programming languages including Python, C++ and Javascript on several projects including API development, Computer Vision, Automation and Web Development.',], false, true,20);
@@ -94,13 +107,7 @@ createTyped('.p4Text',[' A web application designed to make internet accessible 
 // display time
 
 
-var clockElement = document.getElementById('clock');
 
-function clock() {
-        clockElement.textContent = new Date().toString();
-}
-
-setInterval(clock, 1000);
 
 
 (function($) {
