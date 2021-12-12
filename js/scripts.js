@@ -66,7 +66,7 @@ function createTyped( classes, text, loop, showCursor, speed=100 ){
 
 }
 
-createTyped('.aboutMe',['Web Developer','App Developer', 'Competitive Programmer', 'Machine Learning Engineer','Illustrator','UI / UX Desinger', ], true, true);
+createTyped('.aboutMe',['Software Engineer', 'Web Developer','App Developer', 'Competitive Programmer', 'ML developer','Illustrator','UI / UX Desinger', 'CSGO Player', 'Part-time Historian'], true, true);
 createTyped('.name',['Abhishek Mishra',], false, true);
 createTyped('.aboutQues',['string About(Self) =>',], false, true);
 createTyped('.aboutText',['I am a final year Computer Science and Engineering undergrad, primarily a full-stack developer. My eagerness of learning and applying theoretical knowledge drives me. I have done several internships during which I honed my development skills. I am proficient with MEAN / MERN stacks. I have worked with several programming languages including Python, C++ and Javascript on several projects including API development, Computer Vision, Automation and Web Development.',], false, true,20);
